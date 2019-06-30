@@ -1,0 +1,15 @@
+[package]
+name = "gfwlist_domains"
+version = "0.1.0"
+authors = ["Nullizer <nullizer@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+reqwest = "*"
+base64 = "*"
+publicsuffix = "*"
+
+[profile.release]
+panic = 'abort'
+lto = true
+codegen-units = 1
