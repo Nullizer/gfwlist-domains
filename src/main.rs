@@ -35,8 +35,7 @@ fn main() {
 
     println!("{}", lines.join("\n"));
 
-    let mut errors: Vec<_> = errors.into_iter().map(Result::unwrap_err).collect();
-    errors.sort();
+    let errors: Vec<_> = errors.into_iter().map(Result::unwrap_err).collect();
 
     eprintln!("{}", errors.join("\n"));
     eprintln!("{} lines(deduplicated) transform success!", lines.len());
