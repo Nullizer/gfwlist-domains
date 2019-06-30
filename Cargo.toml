@@ -7,9 +7,9 @@ description = "Generate domains list from gfwlist."
 license = "MIT"
 
 [dependencies]
-reqwest = "*"
-base64 = "*"
-publicsuffix = "*"
+reqwest = "0.9.18"
+base64 = "0.10.1"
+publicsuffix = "1.5.2"
 
 [profile.release]
 panic = 'abort'
