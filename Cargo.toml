@@ -1,5 +1,5 @@
 [package]
-name = "gfwlist_domains"
+name = "gfwlist-domains"
 version = "0.1.0"
 authors = ["Nullizer <nullizer@gmail.com>"]
 edition = "2018"

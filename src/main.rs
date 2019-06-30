@@ -8,9 +8,11 @@ fn main() {
     let (tx, rx) = mpsc::channel();
     thread::spawn(move || {
         let url = "https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt";
+        eprintln!("Fetching gfwlist from {}", url);
         let text = reqwest::get(url).unwrap().text().unwrap();
         tx.send(text).unwrap();
     });
+    eprintln!("Fetching Public Suffix list...");
     let list = publicsuffix::List::fetch().unwrap();
 
     let text = rx.recv().unwrap();
@@ -34,7 +36,7 @@ fn main() {
     println!("{}", lines.join("\n"));
 
     let errors: Vec<_> = errors.into_iter().map(Result::unwrap_err).collect();
-    eprintln!("\n{}\n", errors.join("\n"));
+    eprintln!("\nNot transform:\n\n{}\n", errors.join("\n"));
     eprintln!("Total {} lines (already removed {} duplicated) transformed.",
         lines.len(), before_dedup - lines.len());
     eprintln!("{} lines can't transform.", errors.len());
