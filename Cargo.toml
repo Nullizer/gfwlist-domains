@@ -1,10 +1,12 @@
 [package]
 name = "gfwlist-domains"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Nullizer <nullizer@gmail.com>"]
 edition = "2018"
 description = "Generate domains list from gfwlist."
 license = "MIT"
+repository = "https://github.com/Nullizer/gfwlist-domains"
+readme = "README.md"
 
 [dependencies]
 reqwest = "0.9.18"
