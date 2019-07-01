@@ -16,7 +16,7 @@ fn main() {
     let list = publicsuffix::List::fetch().unwrap();
 
     let text = rx.recv().unwrap();
-    let decoded = text.lines().flat_map(|line| base64::decode(line).unwrap()).collect();
+    let decoded = text.lines().map(base64::decode).flat_map(Result::unwrap).collect();
     let decoded = String::from_utf8(decoded).unwrap();
 
     let (lines, errors): (Vec<_>, Vec<_>) = decoded.lines().map(str::trim).filter(|line| {

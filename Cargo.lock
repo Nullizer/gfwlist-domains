@@ -302,7 +302,7 @@ dependencies = [
 
 [[package]]
 name = "gfwlist-domains"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "base64 0.10.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "publicsuffix 1.5.2 (registry+https://github.com/rust-lang/crates.io-index)",
