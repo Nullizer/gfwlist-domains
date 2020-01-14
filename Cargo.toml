@@ -9,7 +9,7 @@ repository = "https://github.com/Nullizer/gfwlist-domains"
 readme = "README.md"
 
 [dependencies]
-reqwest = "0.9.19"
+reqwest = "0.10.1"
 base64 = "0.10.1"
 publicsuffix = "1.5.2"
 
