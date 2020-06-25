@@ -10,7 +10,7 @@ readme = "README.md"
 
 [dependencies]
 reqwest = "0.9.19"
-base64 = "0.10.1"
+base64 = "0.12.3"
 publicsuffix = "1.5.2"
 
 [profile.release]
