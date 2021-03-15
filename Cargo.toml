@@ -11,7 +11,7 @@ readme = "README.md"
 [dependencies]
 reqwest = "0.9.19"
 base64 = "0.10.1"
-publicsuffix = "1.5.2"
+publicsuffix = "2.0.5"
 
 [profile.release]
 panic = 'abort'
